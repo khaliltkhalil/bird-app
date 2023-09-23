@@ -25,9 +25,10 @@ class Birds(Resource):
         return make_response(jsonify(birds), 200)
 
 
-class main(Resource):
+class Main(Resource):
     def get(self):
         return make_response("index", 200)
 
 
 api.add_resource(Birds, "/birds")
+api.add_resource(Main, "/")
